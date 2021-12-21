@@ -1,0 +1,36 @@
+﻿@page "{handler?}"
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h5>Add Details</h5>
+<form method="post">
+    <table>
+        <tr>
+            <td> <input type="text" asp-for="_ParticipantDetail.FirstName" placeholder="First Name" /></td>
+        </tr>
+
+        <tr>
+            <td><input type="text" asp-for="_ParticipantDetail.LastName" placeholder="Last Name" /></td>
+        </tr>
+
+        <tr>
+            <td>   <input type="text" asp-for="_ParticipantDetail.MobileNo" placeholder="Mobile No" /></td>
+        </tr>
+
+        <tr>
+            <td><input type="text" asp-for="_ParticipantDetail.City " placeholder="City" /></td>
+        </tr>
+    </table>
+    <br />
+    <table>
+        <tr>
+            <td><input type="submit" value="Save" asp-page-handler="Save" /></td>
+            <td><input type="reset" value="Cancel" /></td>
+        </tr>
+    </table>
+
+
+</form>
+

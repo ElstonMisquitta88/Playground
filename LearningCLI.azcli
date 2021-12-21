@@ -1,0 +1,95 @@
+#Command to login into Azure
+az login  
+
+#List all the app services plan in the Subscription
+az appservice plan list
+
+# Delete resource group
+az group delete --name ExampleResourceGroup
+
+# Delete resource
+az resource delete \
+  --resource-group ExampleResourceGroup \
+  --name ExampleVM \
+  --resource-type "Microsoft.Compute/virtualMachines"
+
+
+# -- [+] Commands to create --
+# (1) Resource group 
+# (2) App service Plan
+# (3) Web app
+# (4) Configure deployment via Github
+
+# 1. First set the required variables
+$plan="newplanelston"
+$appname="webappelston"
+$repourl="https://github.com/ElstonMisquitta88/AzWebAppDemo"
+
+# 2. Then create the resource group
+az group create --location westindia --name web-grp
+
+# 3. The next command is used to create the App Service Plan
+az appservice plan create --name $plan --resource-group web-grp --sku B1
+
+# 4. The next command is used to create the Azure Web App
+az webapp create --name $appname --resource-group web-grp --plan $plan
+
+# 5. The next command is used to configure the deployment settings
+az webapp deployment source config --name $appname --resource-group web-grp  --repo-url $repourl --branch master --manual-integration
+
+# -- [-] ----------------
+
+
+# Web App - Allow CORS Implementation 
+az webapp cors add --name webappname2000 --resource-group rsggrpname --allowed-origins https://testwebsite.azure.net
+az webapp cors add -g {myRG} -n {myAppName} --allowed-origins https://myapps.com
+
+
+# -- [+] ---------------------------------
+# PowerShell commands for Azure Web Apps
+# Sometimes in the exam , you might get a reference to PowerShell commands as well for Azure Web Apps. Below are the important ones
+# Please refer to the below important PowerShell commands for Azure Web Apps
+# First you can go ahead and create variables that can be used in the PowerShell script. Here we are setting the location for the web application, the name of a new resource group and the name of the new Azure Web App
+
+$location="Central US"
+$resourcegrp="newgrp"
+$webappname="demoapp4040"
+
+# // (1) Next we issue the command to create a new resource group
+New-AzResourceGroup -Name $resourcegrp -Location $location
+
+# // (2) Next we issue the command to create a new App Service Plan
+New-AzAppServicePlan -Name $webappname -Location $location -ResourceGroupName $resourcegrp -Tier Standard
+
+# // (3) Next we issue the command to create a new Web App
+New-AzWebApp -Name $webappname -Location $location -ResourceGroupName $resourcegrp -AppServicePlan $webappname
+
+# // Next we issue the command to create a new Web App deployment slot
+New-AzWebAppSlot -Name $webappname -ResourceGroupName $resourcegrp -Slot "staging"
+
+# -- [-] ---------------------------------
+
+# This command will do the following
+# a) Create an account with the name of newaccount6000
+# b) The default API is SQL API. Hence that is the API that will be chosen for the account
+# c) Here we have only one region which is the West US 2 region. This will be used as read and write region.
+# d) Here we are mentioning a consistency level of Session
+az cosmosdb create -n newaccount6000 -g Playground --default-consistency-level Session --locations regionName='West US 2' failoverPriority=0 isZoneRedundant=False
+
+# ---------------------------------
+#  You can use the following command to create an Azure Cosmos DB account with multiple regions
+az cosmosdb create -n newaccount5000 -g demogrp1 --default-consistency-level Session --locations regionName='West US 2' failoverPriority=0 isZoneRedundant=False --locations regionName='East US 2' failoverPriority=1 isZoneRedundant=False
+# a) Here we are mentioning the primary region as West US 2. This is because we have mentioned a failoverPriority of 0 for this region.
+
+# ---------------------------------
+#If you want to create an Azure Cosmos DB account with the Table API, you can use the following command
+az cosmosdb create -n newaccount6000 -g demogrp1 --default-consistency-level Session --locations regionName='West US 2' failoverPriority=0 isZoneRedundant=False --capabilities EnableTable
+
+
+# -----------------------------------
+# -----------------------------------
+# -----------------------------------
+
+
+
+

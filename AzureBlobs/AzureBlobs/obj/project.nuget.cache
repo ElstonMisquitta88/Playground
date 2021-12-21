@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "ktHl1A8vRGzOZ7e1hdrI7U6N/cWUBfvubGI0m0JGNJW7VdRm2BVKiEOOVVK9nVNLI4HDdyXu7VlsNfkiu+Rwfw==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub\\Playground\\AzureBlobs\\AzureBlobs\\AzureBlobs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Elston\\.nuget\\packages\\azure.core\\1.14.0\\azure.core.1.14.0.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\azure.storage.blobs\\12.8.4\\azure.storage.blobs.12.8.4.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\azure.storage.common\\12.7.3\\azure.storage.common.12.7.3.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.6.0\\system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\system.text.json\\4.6.0\\system.text.json.4.6.0.nupkg.sha512",
+    "C:\\Users\\Elston\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}
